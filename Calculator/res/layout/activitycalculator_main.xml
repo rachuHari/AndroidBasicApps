@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainCalculatorActivity" >
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Exit" />
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnAdd"
+        android:layout_alignBottom="@+id/btnAdd"
+        android:layout_toRightOf="@+id/btnExit"
+        android:onClick="getCalc"
+        android:text="-" />
+
+    <Button
+        android:id="@+id/btnDiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSub"
+        android:layout_marginTop="21dp"
+        android:layout_toRightOf="@+id/btnExit"
+        android:onClick="getCalc"
+        android:text="/" />
+
+    <Button
+        android:id="@+id/btnMul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnDiv"
+        android:layout_alignBottom="@+id/btnDiv"
+        android:layout_toLeftOf="@+id/btnExit"
+        android:onClick="getCalc"
+        android:text="*" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnAdd"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:text="Arithmetic operation"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnExit"
+        android:layout_marginBottom="103dp"
+        android:layout_toLeftOf="@+id/editNum1"
+        android:onClick="getCalc"
+        android:text="+" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_marginRight="17dp"
+        android:text="here" />
+
+    <TextView
+        android:id="@+id/num2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editNum1"
+        android:layout_toLeftOf="@+id/textView3"
+        android:text="Number 2"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/editNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/btnMul"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btnAdd"
+        android:layout_centerVertical="true"
+        android:text="RESULT"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/num1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editNum2"
+        android:layout_alignLeft="@+id/num2"
+        android:text="Number 1"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/editNum1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textResult"
+        android:layout_alignLeft="@+id/editNum2"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>
